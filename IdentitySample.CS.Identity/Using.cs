@@ -1,0 +1,1 @@
+﻿global using IdentitySample.CS.Identity.Models.Entities;

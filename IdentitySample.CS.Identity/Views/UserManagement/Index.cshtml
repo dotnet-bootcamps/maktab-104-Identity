@@ -1,0 +1,32 @@
+﻿@model List<UserManagementViewModel>
+
+<h1>مدیریت کاربران</h1>
+
+<table class="table table-striped w-100">
+    <tr>
+        <td>شناسه</td>
+        <td>نام</td>
+        <td>نام خانوادگی</td>
+        <td>کد ملی</td>
+        <td>ایمیل</td>
+        <td>وضعیت ایمیل</td>
+        <td>موبایل</td>
+        <td>وضعیت موبایل</td>
+        <td>نقش ها</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.NationalCode</td>
+            <td>@item.Email</td>
+            <td>@item.EmailConfirmed</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.PhoneNumberConfirmed</td>
+            
+            <td>@string.Join(", ", @item.Roles)</td>
+        </tr>
+    }
+</table>
